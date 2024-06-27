@@ -3,6 +3,9 @@
   Written in Processing 3.
 */
 
+import processing.sound.*;
+SoundFile file;
+
 int WIDTH = 500; //WIDTH OF THE WINDOW'S SCREEN
 int HEIGHT = 500; //HEIGHT OF THE WINDOW'S SCREEN
 int CELL_SIZE = 25; //CELL SIDE LENGTH
@@ -24,6 +27,9 @@ int[] starBrightness = new int[numStars];
 
 void setup(){
 	size(500, 500);
+  // Load a soundfile from the /data folder of the sketch and play it back
+  file = new SoundFile(this, "sound.mp3");
+  file.play();
 
 	maze = new Maze1(WIDTH/CELL_SIZE, HEIGHT/CELL_SIZE); //Adaptive maze, screen size divided by the size of the cell
 	player = new Player(maze.firstCell.x, maze.firstCell.y); // The X & Y of the player are the same that first cell of the maze.
