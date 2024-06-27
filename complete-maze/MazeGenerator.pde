@@ -66,8 +66,8 @@ void draw(){
 	//draw the maze
 	strokeWeight(1.2);
 	stroke(#ffffff);
-	for (Cell[] cells : maze.grid) {
-		for (Cell cell : cells) {
+	for (Cell1[] cells : maze.grid) {
+		for (Cell1 cell : cells) {
 			if(!cell.walls[3].isOpen){
 				line(cell.y * CELL_SIZE + CELL_SIZE, cell.x * CELL_SIZE, cell.y * CELL_SIZE + CELL_SIZE, cell.x * CELL_SIZE + CELL_SIZE);
 			}

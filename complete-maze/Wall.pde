@@ -17,8 +17,8 @@ public class Wall{
 		this.isEdge = true;
 	}
 
-	Cell c1;
-	Cell c2;
+	Cell1 c1;
+	Cell1 c2;
 
 	boolean isEdge; // Walls that only have one cell
 	boolean isOpen;

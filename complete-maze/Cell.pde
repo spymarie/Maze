@@ -3,8 +3,8 @@
   Written in Processing 3.
 */
 
-public class Cell{
-	public Cell(int x, int y){
+public class Cell1{
+	public Cell1(int x, int y){
 		this.x = x;
 		this.y = y;
 		this.isInMaze = false;;

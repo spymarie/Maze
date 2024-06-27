@@ -10,14 +10,14 @@ public class Maze1{
 		this.rows = rows;
 		this.cols = cols;
 
-		this.grid = new Cell[rows][cols];
+		this.grid = new Cell1[rows][cols];
 		wallList = new ArrayList();
 		generateCells();
 		generateMaze();
 	}
 
 	private void generateMaze(){
-		Cell currentCell = grid[int(random(rows))][int(random(cols))];
+		Cell1 currentCell = grid[int(random(rows))][int(random(cols))];
 
 		firstCell = currentCell;
 		insertCellToMaze(currentCell, null);
@@ -46,7 +46,7 @@ public class Maze1{
 	}
 
 	//Inserts the cell to the maze and its walls, but skip one of the wall.
-	private void insertCellToMaze(Cell pCell, Wall skipWall){
+	private void insertCellToMaze(Cell1 pCell, Wall skipWall){
 		pCell.setIsInMaze();
 		for (Wall wall : pCell.walls) {
 			if(wall != skipWall){
@@ -59,7 +59,7 @@ public class Maze1{
 	private void generateCells(){
 		for (int i = 0; i < rows; ++i) {
 			for (int j = 0; j < cols; ++j) {
-				grid[i][j] = new Cell(i, j);
+				grid[i][j] = new Cell1(i, j);
 			}
 		}
 		generateWalls(); //Set all the walls of the maze.
@@ -110,9 +110,9 @@ public class Maze1{
 	int rows;
 	int cols;
 
-	Cell firstCell;
-	Cell endCell;
+	Cell1 firstCell;
+	Cell1 endCell;
 
-	Cell[][] grid;
+	Cell1[][] grid;
 	ArrayList<Wall> wallList;
 }
