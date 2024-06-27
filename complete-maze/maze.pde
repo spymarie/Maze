@@ -3,6 +3,8 @@
   Written in Processing 3.
 */
 
+
+
 public class Maze1{
 	public Maze1(int rows, int cols){
 		this.rows = rows;
